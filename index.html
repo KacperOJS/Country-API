@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>REST API training</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <h1>Where in the world?</h1>
+                <button>Dark theme</button>
+            </div>
+        </header>
+        <div class="filters">
+            <input type="text" id="query" placeholder="Search for a country" />
+            <select name="region" id="region">
+                <option value="">Filter by region</option>
+                <option value="Europe">Europe</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        <main id="root"></main>
+        <script type="module" src="dom-utils.js"></script>
+        <script type="module" src="view-dashboard.js"></script>
+        <script type="module" src="view-detail.js"></script>
+        <script type="module" src="app.js"></script>
+    </body>
+</html>

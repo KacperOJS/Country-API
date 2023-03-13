@@ -1,0 +1,152 @@
+:root {
+    --color-text: hsl(200, 15%, 8%);
+    --color-input: hsl(0, 0%, 52%);
+    --color-background: hsl(0, 0%, 98%);
+    --color-header-background: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+}
+
+.filters,
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+header {
+    background-color: var(--color-header-background);
+    margin-bottom: 32px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 32px;
+    max-width: 1280px;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.filters {
+    display: none;
+}
+
+.filters.active {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#query {
+    background-color: var(--color-background);
+    border: none;
+    box-shadow: 0px 0px 10px -5px rgb(66 68 90);
+    padding: 15px 30px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 70px;
+    list-style: none;
+}
+
+li {
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -8px rgb(66 68 90);
+    overflow: hidden;
+}
+
+li a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+li img {
+    aspect-ratio: 160/98;
+    width: 100%;
+}
+
+.info-container {
+    padding: 30px 20px;
+}
+
+.country-name {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.detail-button {
+    background: transparent;
+    box-shadow: 0px 0px 10px -5px rgb(66 68 90);
+
+    border-radius: 5px;
+    color: var(--color-text);
+    display: inline-block;
+    padding: 0 30px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.border-countries-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+@media only screen and (max-width: 1000px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .detail-container,
+    .detail-content {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
